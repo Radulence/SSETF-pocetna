@@ -482,6 +482,7 @@ body {
     overflow-x: hidden;
     height: 95vh;
     position: fixed;
+	background: radial-gradient(rgb(159, 161, 247) , rgb(89, 128, 253));
 }
 
 
