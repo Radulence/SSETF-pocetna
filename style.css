@@ -565,7 +565,8 @@ label {
 .mobpoz2 {
     display: flex;
   transform: scale(2);
-   left: 60px;
+   left: 0px;
+	bottom: 0px;
     z-index: -2;
     top: -60px;
     width: 100%;
