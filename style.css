@@ -1,0 +1,663 @@
+/* navbar------------------------------*/
+
+
+
+
+
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 998;
+  width: 100%;
+  background: linear-gradient(-135deg, #6e9ff8, #4158d0);
+  
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(20px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75% at 94% 51%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 999;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+ 
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+
+  color: #fff;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+  border-radius: 50%;
+  border: none;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+  border-radius: 50%;
+
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #4158d0;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+
+#ikona{
+  top: -3px;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #ececee;
+	background: radial-gradient(rgb(159, 161, 247) , rgb(49, 97, 255));
+	overflow: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+.section-center{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+.logo {
+	position: absolute;
+	top: 2px;
+	left: 0px;
+	display: block;
+	z-index: 997;
+	transition: all 250ms linear;
+  height: 40px;
+    cursor: pointer;
+    
+}
+.logo img {
+	
+	display: block;
+  transform: scale(0.7);
+  left: 0px;
+  top: 0px;
+  
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) {
+  .menu-icon:checked + label,
+  .menu-icon:not(:checked) + label{
+    right: 55px;
+  }
+  .logo {
+    left: 30px;
+  }
+  .nav{
+    right: 30px;
+  }
+  h1{
+    font-size: 9vw;
+    -webkit-text-stroke: 2px transparent;
+    text-stroke: 2px transparent;
+    -webkit-text-fill-color: #ffeba7;
+    text-fill-color: #ffeba7;
+    color: #ffeba7;
+  }
+  .nav ul li a{
+    font-size: 3vh;
+    top: -120px
+  }
+
+  
+
+}
+
+
+/* Pocetnaaa----------------------------------------------------------------------*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.pocetna-strana {
+    min-height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#app {
+  
+  min-height: 100vh;
+  position: fixed;
+  z-index: -1;
+  
+}
+
+
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding-bottom: 4vmin;
+  height: 100vh;
+  width: 100%;
+  cursor: default;
+  color: #3a3535;
+  margin-bottom: 50px;
+}
+
+body {
+  display: grid;
+  padding: 0;
+  background-color: black;
+  overflow: visible;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.title {
+  padding-left: 1em;
+  grid-column: 1/-1;
+  grid-row: 1;
+  font-family: "Prata", serif;
+  font-size: 8vw;
+  width: 100%;
+  z-index: 2;
+}
+.title > .title-inner {
+  display: inline-block;
+}
+
+@-webkit-keyframes text-clip {
+  from {
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes text-clip {
+  from {
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@-webkit-keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+.cafe,
+.mozart {
+  -webkit-animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title-inner {
+  display: inline-block;
+  -webkit-animation: inner-left 1s 1s ease both;
+          animation: inner-left 1s 1s ease both;
+}
+
+.cafe-inner {
+  display: inline-block;
+  -webkit-animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.podnaslov {
+  -webkit-animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title {
+  -webkit-animation: outer-left 1s 1s ease both;
+          animation: outer-left 1s 1s ease both;
+}
+
+.cafe > .cafe-inner {
+  display: inline-block;
+}
+
+.mozart {
+  display: inline-block;
+}
+
+.image {
+  grid-row: 1;
+  grid-column: 2;
+  margin-left: -2rem;
+  transform: scale(0.75);
+  right: -5px;
+  opacity: 1;
+  -webkit-animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+          animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+@-webkit-keyframes image-in {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes image-in {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.podnaslov {
+    font-size: 30px;
+    left: -120px;
+}
+
+.cafe {
+    background-color: rgba(255, 255, 255, 0.74);
+    transform: scale(0.96);
+    left: 50px;
+}
+
+.cafe-inner {
+    left: -120px;
+}
+
+.ss {
+    color: white;
+}
+
+.etf {
+    color: rgb(10, 10, 92);
+}
+
+
+.pozadina {
+    background-image: url(pozadina.png);
+    position: fixed;
+    height: 100vh;
+    width: 40%;
+    top: -189px;
+    z-index: -4;
+}
+.pozmob {
+    display: none;
+   
+}
+
+.mobpoz2 {
+    display: none;
+   
+}
+
+.linije {
+  background-image: url(linijedruga.png);
+  height: 100vh;
+  z-index: -10;
+  opacity: 0.45;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo2 {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/* SCROLL BAAAR ------------------------------------------------------------------------------ */
+
+
+::-webkit-scrollbar {
+    width: 25px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(224, 224, 250);
+    border-radius: 30px;
+    border: rgb(28, 98, 155) 2px solid;
+    width: 90%;
+}
+
+
+/* ------------------------RESPONSIVE ZA MOBILNE -----------------------------------*/
+
+@media only screen and (max-width: 453px) {
+
+html {
+  height: 95vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    height: 95vh;
+    position: fixed;
+}
+
+
+#menu-icon {
+    transform: scale(0.6);
+    width: 10px;
+    height: 10px;
+    right: 80px;
+    z-index: 999;
+
+}
+
+label {
+    transform: scale(0.6);
+    width: 10px;
+    height: 10px;
+    
+}
+
+
+.cafe {
+    transform: scale(0.7);
+}
+
+.image {
+    width: 200px;
+    height: 400px;
+    top: 320px;
+    left: 17px;
+    transform: scale(1.55);
+}
+
+.cafe{
+    left: 20px;
+    top: 140px;
+}
+
+.cafe-inner {
+    font-size: 30px;
+    left: -32px;
+}
+
+.podnaslov {
+    font-size: 10px;
+    left: 0.1px;
+}
+
+.pt-5 {
+    font-size: 20px;
+}
+
+#app {
+    margin-bottom: 0;
+  
+    position: absolute;
+}
+
+.pocetna-strana  {
+    
+    position: sticky;
+}
+
+.pozadina {
+  
+    display: none;
+    
+}
+
+.pozmob {
+    display: flex;
+    z-index: 0;
+    top: -100px;
+   transform: scale(1.9);
+   
+   
+    
+}
+
+.mobpoz2 {
+    display: flex;
+    transform: scale(1.9);
+    right: -120px;
+    z-index: -2;
+    top: -60px;
+}
+
+svg:nth-child(1){
+  
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  
+}
+
+svg:nth-child(2){
+
+  filter: drop-shadow(-13px 5px 2px rgb(0 0 0 / 0.4));
+
+
+}
+
+
+.linije {
+  top: -90px;
+  opacity: 0.75;
+}
+
+.logo img{
+  display: none;
+}
+
+.logo2{
+  position: absolute;
+	top: 2px;
+	left: 10px;
+	display: block;
+	z-index: 997;
+	transition: all 250ms linear;
+    cursor: pointer;
+}
+
+.logo3 {
+  z-index: -999;
+}
+
+
+li:nth-child(1) {
+  font-size: -31px;
+  height: 20px;
+  margin: 10px;
+  
+  transform: scale(0.8);
+}
+
+li:nth-child(2) {
+  font-size: xx-small;
+  height: 20px;
+  margin: 10px;
+  
+  transform: scale(0.8);
+}
+
+li:nth-child(3) {
+  font-size: xx-small;
+  height: 20px;
+  margin: 10px;
+  top: 10px;
+  transform: scale(0.8);
+}
+
+li:nth-child(4) {
+  font-size: xx-small;
+  height: 20px;
+  margin: 10px;
+  top: 10px;
+  transform: scale(0.8);
+}
+
+ul {
+  width: 100%;
+}
+
+
+
+
+}
+
+
+
+
+
+
+.naslov {
+    top: 30px;
+    z-index: 999;
+}
+
+
+
+
+
