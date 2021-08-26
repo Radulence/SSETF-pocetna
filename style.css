@@ -554,7 +554,8 @@ label {
 .pozmob {
     display: flex;
     z-index: 0;
-    top: -100px;
+    top: -70px;
+    left: 60px;
    transform: scale(1.9);
    
    
@@ -564,7 +565,7 @@ label {
 .mobpoz2 {
     display: flex;
     transform: scale(1.9);
-    right: -120px;
+    right: -150px;
     z-index: -2;
     top: -60px;
 }
