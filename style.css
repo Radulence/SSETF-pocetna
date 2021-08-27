@@ -554,11 +554,11 @@ label {
 .pozmob {
     display: flex;
     z-index: 0;
-    top: 65px;
+    top: 145px;
     left: 60px;
    transform: scale(1.9);
    background: white;
-   width: 170%;
+   width: 180%;
    height: 20vh;
    
     
