@@ -480,7 +480,7 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    height: 80vh;
+    height: 85vh;
     position: fixed;
     	background: radial-gradient(rgb(159, 161, 247) , rgb(15, 84, 233));
 }
@@ -554,10 +554,12 @@ label {
 .pozmob {
     display: flex;
     z-index: 0;
-    top: -70px;
+    top: 65px;
     left: 60px;
    transform: scale(1.9);
-   
+   background: white;
+   width: 170%;
+   height: 20vh;
    
     
 }
@@ -569,7 +571,7 @@ label {
     z-index: -2;
     top: 0px;
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 svg:nth-child(1){
