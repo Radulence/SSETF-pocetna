@@ -558,9 +558,7 @@ label {
     top: 235px;
     left: 60px;
    transform: scale(1.9);
-   background: white;
-   width: 190%;
-   height: 20vh;
+   
    
     
 }
@@ -570,7 +568,7 @@ label {
   transform: scale(2.57);
    left: -60px;
     z-index: -2;
-    top: -90px;
+    top: -70px;
     width: 100%;
     
 }
