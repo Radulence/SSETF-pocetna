@@ -480,6 +480,7 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+	overflow-y: hidden;
     height: 85vh;
     position: fixed;
     	background: radial-gradient(rgb(159, 161, 247) , rgb(15, 84, 233));
@@ -569,7 +570,7 @@ label {
   transform: scale(2.57);
    left: -60px;
     z-index: -2;
-    top: -30px;
+    top: -90px;
     width: 100%;
     
 }
